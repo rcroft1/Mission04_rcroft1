@@ -36,5 +36,5 @@ $("#btnSubmit").click(function () {
 
     // outputting to the form
 
-    $("#result").html("Percent Grade: " + gradePct + "%<br>" + "Letter Grade: " + letterGrade);
+    alert("Percent Grade: " + gradePct + "%<br>" + "Letter Grade: " + letterGrade);
 })
