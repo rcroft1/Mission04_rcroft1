@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -7,11 +8,24 @@ namespace Mission04_rcroft1.Models
 {
     public class CalculatorModel
     {
-        public decimal assignments1 { get; set; }
-        public decimal quizzes1 { get; set; }
-        public decimal groupProjects1 { get; set; }
-        public decimal intex1 { get; set; }
-        public decimal midterm1 { get; set; }
-        public decimal final1 { get; set; }
+        // creating variables and validation
+
+        [Range(0,100, ErrorMessage = "The Assignments grade must be between 0 and 100.")]
+        public decimal assignments { get; set; }
+
+        [Range(0, 100, ErrorMessage = "The Quizzes grade must be between 0 and 100.")]
+        public decimal quizzes { get; set; }
+
+        [Range(0, 100, ErrorMessage = "The Group Projects grade must be between 0 and 100.")]
+        public decimal groupProjects { get; set; }
+
+        [Range(0, 100, ErrorMessage = "The Intex grademust be between 0 and 100.")]
+        public decimal intex { get; set; }
+
+        [Range(0, 100, ErrorMessage = "The Midterm grade must be between 0 and 100.")]
+        public decimal midterm { get; set; }
+
+        [Range(0, 100, ErrorMessage = "The Final Exam grade must be between 0 and 100.")]
+        public decimal final { get; set; }
     }
 }

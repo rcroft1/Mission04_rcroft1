@@ -7,9 +7,11 @@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewData["Title"]</title>
     <link rel="shortcut icon" href="~/img/icon.ico" type="image/x-icon">
+    <h2>@ViewData["headText"]</h2>
 </head>
 
 <body>
+    <!-- nav bar-->
 
     <nav>
         <a asp-controller="My" asp-action="Index">Home</a>
@@ -19,6 +21,8 @@
     <div>
         @RenderBody()
     </div>
+
+    <!--script tags and links-->
 
     <link href="~/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 
